@@ -126,6 +126,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
+if DEBUG:
+    MEDIA_ROOT = BASE_DIR / 'media'
+else:
+    MEDIA_ROOT = f'/var/www/{BASE_DIR.name}/media'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
