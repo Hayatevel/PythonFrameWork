@@ -5,4 +5,5 @@ app_name = 'myapp'
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
+    path('portfolio/', views.PortFolioView.as_view(), name='portfolio'),
 ]
