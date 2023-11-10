@@ -1,0 +1,32 @@
+ul.footer {
+    display: inline-grid;
+    grid-auto-flow: row;
+    grid-gap: 24px;
+    justify-items: center;
+    margin: auto;
+    list-style-type: none;
+}
+@media (min-width: 500px) {
+    ul.footer {
+        grid-auto-flow: column;
+    }
+}
+    li.footer:last-child {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+    a.footer{
+        color: black;
+    }
+    a.footer:hover{
+        color: gray;
+    }
+    /* below is just for demo styling */
+    div.footer {
+        display: flex;
+        height: 10vh;
+        width: 100%;
+        background-color: aliceblue;
+        line-height: 1.3;
+        font-family: Menlo, monospace;
+    }

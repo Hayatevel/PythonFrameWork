@@ -156,11 +156,6 @@ p {
 .tm-page-title {
   font-weight: 300;
 }
-.tm-page-title-folio {
-  font-weight: 300;
-  margin: auto;
-  padding: 0 200px;
-}
 .content {
   max-width: 370px;
 }
@@ -325,8 +320,6 @@ p {
   background-color: gray;
   color: white;
   justify-content: center;
-  margin: 0 275px;
-  padding: 0;
 }
 
 .tm-btn-folio:hover {
@@ -347,6 +340,13 @@ p {
 .btn-primary:hover {
   background-color: #0e7fb9;
   border-color: transparent;
+}
+/* myself */
+.folio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Footer */
