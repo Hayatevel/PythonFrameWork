@@ -20,7 +20,7 @@ https://www.tooplate.com/view/2097-pop
     <link rel="stylesheet" href="{% static 'fontawesome/css/fontawesome-all.min.css' %}">                <!-- https://fontawesome.com/ -->
     <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/>                       <!-- http://kenwheeler.github.io/slick/ -->
     <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/tooplate-style.css' %}">                               <!-- Templatemo style -->
+    <link rel="stylesheet" href="{% static 'css/index-style.css' %}">                               <!-- Templatemo style -->
 
     <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");</script>
     
@@ -69,8 +69,11 @@ https://www.tooplate.com/view/2097-pop
                                                     </p>
                                                 </div>
                                                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                    <p>-- click here to My First Self Introduce Web HTML / CSS.</p>
-                                                    <p>I AM.</p>
+                                                    <p>
+                                                        This website functions as a hub site html. <br>
+                                                        You can click on the different grids to go to different web pages. <br>
+                                                        You can also send me an email using the contact form. <br>
+                                                    </p>
                                                     <img src="{% static 'img/chigasaki_visual.jpeg' %}" class="img-fluid">
                                                 </div>                                        
                                             </div>
@@ -82,18 +85,16 @@ https://www.tooplate.com/view/2097-pop
                                     <div class="product">
                                         <div class="tm-nav-link">
                                             <i class="fas fa-users fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">DETAIL</span>
+                                            <span class="tm-nav-text">FOLIO</span>
                                             <div class="product__bg"></div>            
                                         </div>                                     
                                         <div class="product__description">
                                             <div class="p-sm-4 p-2">
                                                 <div class="folio">
-                                                        <h2 class="tm-page-title-folio">My Port Folio Site</h2>
-                                                </div>
-                                                <div class="folio">
-                                                        <a href="{% url 'myapp:portfolio' %}" class="btn tm-btn-folio">
-                                                            Click
-                                                        </a>
+                                                    <h2 class="tm-page-title-folio">My Port Folio Site</h2>
+                                                    <a href="{% url 'myapp:portfolio' %}" class="btn tm-btn-folio"target="_blank" rel="noopener noreferrer">
+                                                        Portfolio
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -109,24 +110,12 @@ https://www.tooplate.com/view/2097-pop
                                         </div>                                 
                                         <div class="product__description">
                                             <div class="p-sm-4 p-2">
-                                                <div class="row mb-3">
-                                                    <div class="col-12">
-                                                        <h2 class="tm-page-title">My Work</h2>        
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <p>Photo Library</p>
-                                                    </div>
-                                                    <div class="col-lg-12">
-                                                        <img src="{% static 'img/gallery_top.JPG' %}" class="img-fluid">
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <a href="https://instagram.com/Hayate_vel" class="btn tm-btn-gray" >
-                                                            GALLERY
-                                                            <i class="fas fa-regular fa-images"></i>
-                                                        </a>
-                                                    </div>
+                                                <div class="folio">
+                                                    <h2 class="tm-page-title-folio">GALLERY</h2>
+                                                    <p>Photo Library</p>
+                                                    <a href="{% url 'myapp:photos' %}" class="btn tm-btn-folio" target="_blank" rel="noopener noreferrer">
+                                                        <i class="fas fa-regular fa-images"></i>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -180,7 +169,7 @@ https://www.tooplate.com/view/2097-pop
                 </div>                
             </div>
             <footer>
-                <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2020</span> Your Company. 
+                <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2023</span> Hayate.inc
                 
                 Design: <a rel="nofollow" href="https://www.tooplate.com" class="tm-text-highlight">Tooplate</a></p>
             </footer>

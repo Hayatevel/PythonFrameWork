@@ -1,4 +1,4 @@
-ul.footer {
+.ul-footer {
     display: inline-grid;
     grid-auto-flow: row;
     grid-gap: 24px;
@@ -7,22 +7,22 @@ ul.footer {
     list-style-type: none;
 }
 @media (min-width: 500px) {
-    ul.footer {
+    .ul-footer {
         grid-auto-flow: column;
     }
 }
-    li.footer:last-child {
+    .li-footer:last-child {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
-    a.footer{
+    .a-footer{
         color: black;
     }
-    a.footer:hover{
+    .a-footer:hover{
         color: gray;
     }
     /* below is just for demo styling */
-    div.footer {
+    .footer {
         display: flex;
         height: 10vh;
         width: 100%;

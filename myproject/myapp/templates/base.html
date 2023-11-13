@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hayate/{% block title%}{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="{% static 'img/favicon_python.png' %}" sizes="120x120">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="{% static 'css/photo-footer-style.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+            <img class="w3-image" src="{% static 'img/header.jpg' %}" alt="header" width="1500" height="600">
+            <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+                <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">Hayate</h1>
+                <h5 class="w3-hide-large" style="white-space:nowrap">Portfolio</h5>
+                <h3 class="w3-hide-medium w3-hide-small">Programming/Photogram</h3>
+            </div>
+            <!-- Navbar (placed at the bottom of the header image) -->
+            <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px">
+                <a href="{% url 'myapp:photos' %}" class="w3-bar-item w3-button">Photos</a>
+                <a href="{% url 'myapp:portfolio' %}" class="w3-bar-item w3-button">Portfolio</a>
+                <a href="#" class="w3-bar-item w3-button">Temporary</a>
+            </div>
+        </header>
+        <!-- Navbar on small screens -->
+        <main>
+            <div class="w3-center w3-light-grey w3-padding-16 w3-hide-large w3-hide-medium">
+                <div class="w3-bar w3-light-grey">
+                    <a href="{% url 'myapp:photos' %}" class="w3-bar-item w3-button">Photo</a>
+                    <a href="#portfolio" class="w3-bar-item w3-button">Portfolio</a>
+                    <a href="#" class="w3-bar-item w3-button">Temporary</a>
+                </div>
+            </div>
+            <!-- Page content -->
+            {% block contents %}
+            {% endblock %}
+        </main>
+        <footer>
+            <div class="footer">
+                <ul class="ul-footer">
+                    <li class="li-footer">
+                        <a class="a-footer" href="https://github.com/Hayatevel/">GitHub</a>
+                    </li>
+                    <li class="li-footer">
+                        <a class="a-footer" href="https://instagram.com/Hayate_vel">Instagram</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js" integrity="sha384-t1T3fU6l3Ft5pP6v7o1d8KypVjBoGRfM9WO7iR4V4feBYg1MHpk/V6kdMzqs6f5g" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-python.min.js" integrity="sha384-kI3xqTm6l5HrKjgrXKZ9p8t2WTs9j5IewAqwXHwU4w9c22QMdYPju7P1lTVB7oXj" crossorigin="anonymous"></script>
+    </body>
+</html>

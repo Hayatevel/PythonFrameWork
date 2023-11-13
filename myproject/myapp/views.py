@@ -7,8 +7,8 @@ class IndexView(TemplateView):
     template_name = 'index.html'
     
     
-class PortFolioView(ListView):
-    template_name = 'portfolio.html'
+class PhotoView(ListView):
+    template_name = 'photos.html'
     queryset = PhotoLibrary.objects.order_by('id')
     
     def get_image(self, request):
@@ -16,3 +16,5 @@ class PortFolioView(ListView):
         return render(request, self.template_name, {'images': images})
     
     
+class PortfolioView(TemplateView):
+    template_name = 'portfolio.html'
