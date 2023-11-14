@@ -143,7 +143,7 @@ p {
 }
 
 .product:hover {
-  background: dimgray;
+  background: firebrick;
   color: #a9a9a9;
 }
 
@@ -302,35 +302,59 @@ p {
   padding-left: 0;
 }
 
-.tm-btn-submit {
-  background-color: #006599;
-}
-
-.tm-btn-gray {
-  background-color: #494752;
-  color: white;
-}
-
-.tm-btn-gray:hover {
-  background-color: #77757d;
-  color: white;
-}
-
-.tm-btn-folio {
-  background-color: gray;
-  color: white;
-  justify-content: center;
-}
-
-.tm-btn-folio:hover {
-  background-color: white;
-  color: black;
-}
-
-.btn {
+/* Button */
+/*== ボタン共通設定 */
+.btn{
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*ボタンの形状*/
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid white;/* ボーダーの色と太さ */
   padding: 0.5rem 2.4rem;
+  text-align: center;
+  outline: none;
   font-size: 1.2rem;
   border-radius: 0;
+  /*アニメーションの指定*/   
+  transition: ease 1s;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	color: white;
+}
+
+.btn:hover span{
+	color: ghostwhite;
+}
+
+/*== 背景が流れる（斜め） */
+.bgskew::before {
+	content: '';
+    /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: -130%;
+    /*色や形状*/
+	background: firebrick;
+	width:120%;
+	height: 100%;
+	transform: skewX(-25deg);
+}
+
+/*hoverした時のアニメーション*/
+.bgskew:hover::before {
+	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+	100% {
+		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
 }
 
 .btn-primary {
@@ -341,7 +365,12 @@ p {
   background-color: #0e7fb9;
   border-color: transparent;
 }
-/* myself */
+
+.tm-btn-submit {
+  background-color: #006599;
+}
+
+/* Myself */
 .folio{
   display: flex;
   flex-direction: column;
@@ -362,7 +391,7 @@ footer {
   color: white;
 }
 .tm-text-highlight:hover {
-  color: red;
+  color: firebrick;
 }
 .tm-main-content.tm-footer-relative {
   flex-direction: column;
