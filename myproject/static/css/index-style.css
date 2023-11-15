@@ -250,6 +250,14 @@ p {
   z-index: 1001;
 }
 
+/* Myself */
+.folio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Team */
 .tm-reverse-sm {
   flex-direction: row;
@@ -304,28 +312,28 @@ p {
 
 /* ----------------------------------------------- */
 /* Button */
-/*== ボタン共通設定 */
+/* == ボタン共通設定 */
 .btn{
-  /*アニメーションの起点とするためrelativeを指定*/
+  /* アニメーションの起点とするためrelativeを指定 */
   position: relative;
   overflow: hidden;
-  /*ボタンの形状*/
+  /* ボタンの形状 */
   text-decoration: none;
   display: inline-block;
-  border: 1px solid white;/* ボーダーの色と太さ */
+  border: 1px solid white; /* ボーダーの色と太さ */
   padding: 1.2rem 2.8rem;
   text-align: center;
   outline: none;
   font-size: 1.2rem;
   border-radius: 0;
-  /*アニメーションの指定*/   
+  /* アニメーションの指定 */   
   transition: ease 1s;
 }
 
-/*ボタン内spanの形状*/
+/* ボタン内spanの形状 */
 .btn span {
 	position: relative;
-	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+	z-index: 3; /* z-indexの数値をあげて文字を背景よりも手前に表示 */
 	color: white;
 }
 
@@ -333,28 +341,28 @@ p {
 	color: ghostwhite;
 }
 
-/*== 背景が流れる（斜め） */
+/* == 背景が流れる(斜め) */
 .bgskew::before {
 	content: '';
-    /*絶対配置で位置を指定*/
+  /* 絶対配置で位置を指定 */
 	position: absolute;
 	top: 0;
 	left: -130%;
-    /*色や形状*/
+  /* 色や形状 */
 	background: firebrick;
 	width:120%;
 	height: 100%;
 	transform: skewX(-25deg);
 }
 
-/*hoverした時のアニメーション*/
+/* hoverした時のアニメーション */
 .bgskew:hover::before {
-	animation: skewanime .5s forwards;/*アニメーションの名前と速度を定義*/
+	animation: skewanime .5s forwards; /* アニメーションの名前と速度を定義 */
 }
 
 @keyframes skewanime {
 	100% {
-		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
+		left:-10%; /* 画面の見えていない左から右へ移動する終了地点 */
 	}
 }
 
@@ -365,8 +373,8 @@ p {
   top:50%;
   transform:translate(-50%,-50%);
   /* アニメーションの指定 */
-  transition: all .5s;
-  /*ブロック要素にしてテキスト折り返しなし */  
+  transition: all .7s;
+  /* ブロック要素にしてテキスト折り返しなし */  
   display: block;
   white-space: nowrap;
 }
@@ -399,12 +407,8 @@ opacity:1; /* 不透明に */
   background-color: #006599;
 }
 
-/* Myself */
-.folio{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.tm-btn-submit span {
+  color: white;
 }
 
 /* Footer */

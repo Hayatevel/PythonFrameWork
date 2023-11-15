@@ -24,7 +24,7 @@
             <video id="video" webkit-playsinline playsinline muted autoplay loop>
                 <source src="{% static 'img/bg_video.mov' %}">
             </video>
-        </div>
+        </div> <!-- #video-area -->
         <!-- Display contents -->
         <div id="tm-wrap">
             <div class="tm-main-content">
@@ -36,8 +36,8 @@
                                 <h1 class="mb-4">Hayate Aoki</h1>
                                 <img src="{% static 'img/underline.png' %}" class="img-fluid mb-4">
                                 <p>This is my way, this is only way.</p>
-                            </div>
-                        </div>
+                            </div> <!-- .tm-site-header -->
+                        </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col -->
                         <!-- Content of the right of centre -->
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                             <div class="content">
@@ -49,13 +49,13 @@
                                                 <i class="fas fa-bolt fa-3x tm-nav-link"></i>
                                                 <span class="tm-nav-text">INTRODUCE</span>
                                                 <div class="product__bg"></div>
-                                            </div>
+                                            </div> <!-- .tm-nav-link -->
                                             <div class="product__description">
                                                 <div class="row mb-3">
                                                     <div class="col-12">
                                                         <h2 class="tm-page-title">My Introduce</h2>
-                                                    </div>
-                                                </div>
+                                                    </div> <!-- .col-12 -->
+                                                </div> <!-- .row mb-3 -->
                                                 <div class="row">
                                                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                                         <img src="{% static 'img/hayate_logo.png' %}" class="img-fluid mb-3">
@@ -64,7 +64,7 @@
                                                             NAME: Hayate Aoki / 青木 隼風<br>
                                                             FROM: Chigasaki, Kanagawa, Japan
                                                         </p>
-                                                    </div>
+                                                    </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
                                                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                                         <p>
                                                             This website functions as a hub site html. <br>
@@ -72,11 +72,11 @@
                                                             You can also send me an email using the contact form. <br>
                                                         </p>
                                                         <img src="{% static 'img/chigasaki_visual.jpeg' %}" class="img-fluid">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
+                                                </div> <!-- .row -->
+                                            </div> <!-- .product__description -->
+                                        </div> <!-- .product -->
+                                    </div> <!-- .grid__item #home-link -->
                                     <!-- grid of the right of top -->
                                     <div class="grid__item" id="team-link">
                                         <div class="product">
@@ -84,20 +84,21 @@
                                                 <i class="fas fa-users fa-3x tm-nav-icon"></i>
                                                 <span class="tm-nav-text">FOLIO</span>
                                                 <div class="product__bg"></div>
-                                            </div>
+                                            </div> <!-- .tm-nav-kink -->
                                             <div class="product__description">
                                                 <div class="p-sm-4 p-2">
                                                     <div class="folio">
-                                                        <h2 class="tm-page-title-folio">My Port Folio Site</h2>
+                                                        <h2 class="tm-page-title-folio">FOLIO</h2>
+                                                        <p>Folio Library</p>
                                                         <a href="{% url 'myapp:portfolio' %}" class="btn bgskew btntextchange" target="_blank" rel="noopener noreferrer">
                                                             <span>READY?</span>
                                                             <span>GO!</span>
                                                         </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    </div> <!-- .folio -->
+                                                </div> <!-- .p-sm-4 p-2 -->
+                                            </div> <!-- .product__description -->
+                                        </div> <!-- .product -->
+                                    </div> <!-- .grid_item #team-link -->
                                     <!-- grid of the left of bottom -->
                                     <div class="grid__item">
                                         <div class="product">
@@ -105,7 +106,7 @@
                                                 <i class="fas fa-regular fa-image fa-3x tm-nav-icon"></i>
                                                 <span class="tm-nav-text">GALLERY</span>
                                                 <div class="product__bg"></div>
-                                            </div>
+                                            </div> <!-- .tm-nav-link -->
                                             <div class="product__description">
                                                 <div class="p-sm-4 p-2">
                                                     <div class="folio">
@@ -115,11 +116,11 @@
                                                             <span>READY?</span>
                                                             <span>GO!</span>
                                                         </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    </div> <!-- .folio -->
+                                                </div> <!-- .p-sm-4 p-2 -->
+                                            </div> <!-- .product__description -->
+                                        </div> <!-- .product -->
+                                    </div> <!-- .grid__item -->
                                     <!-- grid of the right of bottom -->
                                     <div class="grid__item">
                                         <div class="product">
@@ -127,53 +128,58 @@
                                                 <i class="fas fa-comments fa-3x tm-nav-icon"></i>
                                                 <span class="tm-nav-text">CONTACT</span>
                                                 <div class="product__bg"></div>             
-                                            </div>
+                                            </div> <!-- .tm-nav-link -->
                                             <div class="product__description">
                                                 <div class="pt-sm-4 pb-sm-4 pl-sm-5 pr-sm-5 pt-2 pb-2 pl-3 pr-3">
                                                     <div class="row mb-3">
                                                         <div class="col-12">
                                                             <h2 class="tm-page-title">Contact Us</h2>        
-                                                        </div>
-                                                    </div>
+                                                        </div> <!-- .col-12-->
+                                                    </div> <!-- .row mb-3 -->
                                                     <div class="row mb-4">
                                                         <div class="col-12">
                                                             <p>Lorem ipsum dolor site amet, consectetur adipiscing elit. Aliquam interdum, nisl sed faucibus tempor, massa velit laoreet ipsum, et faucibus sapien magna at enim. Suspendisse a dictum tortor, vel rhoncus libero.</p>
-                                                        </div>
-                                                    </div>
+                                                        </div> <!-- .col-12 -->
+                                                    </div> <!-- .row mb-4 -->
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <form action="index.html" method="post" class="contact-form">
+                                                                {% csrf_token %}
                                                                 <div class="row">
                                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6">
-                                                                        <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
-                                                                    </div>
+                                                                        {{ form.name }}
+                                                                    </div> <!-- .form-group col-md-6 col-lg-6 col-xl-6 -->
                                                                     <div class="form-group col-md-6 col-lg-6 col-xl-6 tm-col-email">
-                                                                        <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
-                                                                    </div>
-                                                                </div>
+                                                                        {{ form.email }}
+                                                                    </div> <!-- .form-group col-md-6 col-lg-6 col-xl-6 tm-col-email -->
+                                                                </div> <!-- .row -->
                                                                 <div class="form-group">
-                                                                    <textarea id="contact_message" name="contact_message" class="form-control" rows="9" placeholder="Message" required></textarea>
-                                                                </div>
-                                                                <button type="submit" class="btn btn-primary tm-btn-submit">Submit</button>
+                                                                    {{ form.message }}
+                                                                </div> <!-- .form-group -->
+                                                                <button type="submit" class="btn btn-primary tm-btn-submit">
+                                                                    
+                                                                    <span>Submit</span>
+                                                                    
+                                                                </button>
                                                             </form>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                                        </div> <!-- .col-12 -->
+                                                    </div> <!-- .row -->
+                                                </div> <!-- .pt-sm-4 pb-sm-4 pl-sm-5 pr-sm-5 pt-2 pb-2 pl-3 pr-3 -->
+                                            </div> <!-- .product__description -->
+                                        </div> <!-- .product -->
+                                    </div> <!-- .grid__item -->
+                                </div>  <!-- .grid -->
+                            </div> <!-- .content -->
+                        </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
+                    </div> <!-- .row -->
+                </div> <!-- .container tm-site-header-container -->
                 <!-- Footer -->
                 <footer>
                     <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2023</span> Hayate.inc
                     Design: <a rel="nofollow" href="https://www.tooplate.com" class="tm-text-highlight">Tooplate</a></p>
                 </footer>
             </div> <!-- .tm-main-content -->  
-        </div>
+        </div> <!-- .tm-wrap -->
         <!-- load JS -->
         <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script> <!-- https://jquery.com/ -->    
         <script src="{% static 'slick/slick.min.js' %}"></script> <!-- http://kenwheeler.github.io/slick/ -->  

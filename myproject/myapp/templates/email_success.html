@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Send Successfully </title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon_python.png' %}" sizes="120x120">
+    <style>
+        body {
+        background-color: #000;
+        color: #0f0;
+        font-family: 'Courier New', monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* ビューポートの高さいっぱいに表示 */
+        margin: 0;
+        }
+        h1 {
+        color: #0f0;
+        }
+        a {
+            color: #0f0;
+            text-decoration: none;
+            border-bottom: 1px dashed #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Email Sent Successfully</h1>
+    <p>Your email has been sent successfully.</p>
+    <p><a href="{% url 'myapp:index' %}">Back to Home</a></p>
+</body>
+</html>
