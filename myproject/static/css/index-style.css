@@ -302,6 +302,7 @@ p {
   padding-left: 0;
 }
 
+/* ----------------------------------------------- */
 /* Button */
 /*== ボタン共通設定 */
 .btn{
@@ -312,7 +313,7 @@ p {
   text-decoration: none;
   display: inline-block;
   border: 1px solid white;/* ボーダーの色と太さ */
-  padding: 0.5rem 2.4rem;
+  padding: 1.2rem 2.8rem;
   text-align: center;
   outline: none;
   font-size: 1.2rem;
@@ -356,6 +357,34 @@ p {
 		left:-10%;/*画面の見えていない左から右へ移動する終了地点*/
 	}
 }
+
+.btntextchange span {
+  /* 絶対配置でテキストの位置を決める */
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  /* アニメーションの指定 */
+  transition: all .5s;
+  /*ブロック要素にしてテキスト折り返しなし */  
+  display: block;
+  white-space: nowrap;
+}
+
+/* 差し替わるテキストの設定 */
+.btntextchange span:nth-child(2) {
+opacity:0; /* 透過0に */
+}
+
+/* hoverするとテキストが入れ替わる設定 */
+.btntextchange:hover span:nth-child(1) {
+opacity:0; /* 透過0に */
+}
+
+.btntextchange:hover span:nth-child(2) {
+opacity:1; /* 不透明に */
+}
+/* -------------------------------------- */
 
 .btn-primary {
   border-color: transparent;
