@@ -1,12 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <!-- ---------- -->
+    <!-- head -->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Hayate</title>
-        <link rel="icon" type="image/png" href="{% static 'img/favicon_python.png' %}" sizes="120x120">
+        <link rel="icon" type="image/png" href="{% static 'img/favicon_python.png' %}" sizes="120x120"> <!-- favicon -->
         <!-- Template 2097 Pop https://www.tooplate.com/view/2097-pop -->
         <!-- load CSS -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">  <!-- Google web font "Open Sans" -->
@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="{% static 'css/index-style.css' %}"> <!-- Template style -->
         <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");</script>
     </head>
-    <!-- ---------- -->
+    <!-- body -->
     <body>
         <!-- Background video -->
         <div id="video-area">
@@ -127,13 +127,13 @@
                                             <div class="tm-nav-link">
                                                 <i class="fas fa-comments fa-3x tm-nav-icon"></i>
                                                 <span class="tm-nav-text">CONTACT</span>
-                                                <div class="product__bg"></div>             
+                                                <div class="product__bg"></div>
                                             </div> <!-- .tm-nav-link -->
                                             <div class="product__description">
                                                 <div class="pt-sm-4 pb-sm-4 pl-sm-5 pr-sm-5 pt-2 pb-2 pl-3 pr-3">
                                                     <div class="row mb-3">
                                                         <div class="col-12">
-                                                            <h2 class="tm-page-title">Contact Us</h2>        
+                                                            <h2 class="tm-page-title">Contact Us</h2>
                                                         </div> <!-- .col-12-->
                                                     </div> <!-- .row mb-3 -->
                                                     <div class="row mb-4">
@@ -181,8 +181,8 @@
             </div> <!-- .tm-main-content -->  
         </div> <!-- .tm-wrap -->
         <!-- load JS -->
-        <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script> <!-- https://jquery.com/ -->    
-        <script src="{% static 'slick/slick.min.js' %}"></script> <!-- http://kenwheeler.github.io/slick/ -->  
+        <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script> <!-- https://jquery.com/ -->
+        <script src="{% static 'slick/slick.min.js' %}"></script> <!-- http://kenwheeler.github.io/slick/ -->
         <script src="{% static 'js/anime.min.js' %}"></script> <!-- http://animejs.com/ -->
         <script src="{% static 'js/main.js' %}"></script>
         <script>
@@ -193,7 +193,7 @@
                     main.addClass('tm-footer-relative');
                 }
                 else {
-                    main.removeClass('tm-footer-relative');   
+                    main.removeClass('tm-footer-relative');
                 }
             }
             /* DOM is ready */
