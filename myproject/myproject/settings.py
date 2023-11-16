@@ -131,17 +131,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-MESSAGE_TAGS = {
-    constants.SUCCESS: 'alert alert-success',
-}
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-DEFAULT_FROM_EMAIL = 'aokihayate20030709@gmail.com'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'aokihayate20030709@gmail.com'
-EMAIL_HOST_PASSWORD = 'rxocmmqvpxszavxe'
-EMAIL_USE_TLS = True
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'aokihayate20030709@gmail.com'
+    SERVER_EMAIL = 'aokihayate20030709@gmail.com'
+else:
+    DEFAULT_FROM_EMAIL = 'aokihayate20030709@gmail.com'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_HOST_USER = 'aokihayate20030709@gmail.com'
+    EMAIL_HOST_PASSWORD = 'rxocmmqvpxszavxe'
+    EMAIL_USE_TLS = True

@@ -1,0 +1,124 @@
+body {
+    background-color: #000;
+    color: white;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: white;
+}
+
+form {
+    width: 50%;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: ghostwhite;
+}
+
+.btn{
+/* アニメーションの起点とするためrelativeを指定 */
+position: relative;
+overflow: hidden;
+/* ボタンの形状 */
+text-decoration: none;
+display: inline-block;
+border: 1px solid black; /* ボーダーの色と太さ */
+padding: 1.2rem 2.8rem;
+text-align: center;
+outline: none;
+font-size: 1.2rem;
+border-radius: 0;
+/* アニメーションの指定 */   
+transition: ease 1s;
+}
+
+/* ボタン内spanの形状 */
+.btn span {
+position: relative;
+z-index: 3; /* z-indexの数値をあげて文字を背景よりも手前に表示 */
+color: dimgrey;
+}
+
+.btn:hover span{
+color: white;
+}
+
+/* == 背景が流れる(斜め) */
+.bgskew::before {
+content: '';
+/* 絶対配置で位置を指定 */
+position: absolute;
+top: 0;
+left: -130%;
+/* 色や形状 */
+background: firebrick;
+width:120%;
+height: 100%;
+transform: skewX(-25deg);
+}
+
+/* hoverした時のアニメーション */
+.bgskew:hover::before {
+animation: skewanime .5s forwards; /* アニメーションの名前と速度を定義 */
+}
+
+@keyframes skewanime {
+100% {
+    left:-10%; /* 画面の見えていない左から右へ移動する終了地点 */
+}
+}
+
+.btntextchange span {
+/* 絶対配置でテキストの位置を決める */
+position: absolute;
+left: 50%;
+top:50%;
+transform:translate(-50%,-50%);
+/* アニメーションの指定 */
+transition: all .7s;
+/* ブロック要素にしてテキスト折り返しなし */  
+display: block;
+white-space: nowrap;
+}
+
+/* 差し替わるテキストの設定 */
+.btntextchange span:nth-child(2) {
+opacity:0; /* 透過0に */
+}
+
+/* hoverするとテキストが入れ替わる設定 */
+.btntextchange:hover span:nth-child(1) {
+opacity:0; /* 透過0に */
+}
+
+.btntextchange:hover span:nth-child(2) {
+opacity:1; /* 不透明に */
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dashed white;
+}
+
+a:hover {
+    color: firebrick;
+    transition: .5s ease;
+    border-bottom: 1px dashed firebrick;
+}
