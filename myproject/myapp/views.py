@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, FormView
 from django.urls import reverse_lazy
 from django.core.mail import send_mail
-from .models import PhotoLibrary
+from .models import PhotoLibrary, Code, MyLibrary
 from .forms import EmailForm
 
 # Create your views here.
@@ -13,10 +13,13 @@ class IndexView(TemplateView):
 class PhotoView(ListView):
     template_name = 'photos.html'
     queryset = PhotoLibrary.objects.order_by('id')
+    context_object_name = 'photos'
     
     
-class PortfolioView(TemplateView):
+class PortfolioView(ListView):
     template_name = 'portfolio.html'
+    queryset = MyLibrary.objects.order_by('-posted_at')
+    context_object_name = 'mylibrary'
     
     
 class EmailView(FormView):

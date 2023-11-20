@@ -12,3 +12,19 @@ class PhotoLibrary(models.Model):
         return self.title
     
     
+class Code(models.Model):
+    code_content = models.TextField()
+    
+    
+class MyLibrary(models.Model):
+    title = models.CharField(max_length=255, null=False)
+    context = models.TextField(null=False)
+    image = models.ImageField(upload_to='my_libraries/', null=False)
+    github = models.URLField(blank=True, null=True)
+    code = models.ManyToManyField(Code)
+    posted_at = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.title
+    
+    

@@ -1,6 +1,36 @@
-{% extends "base.html" %}
 {% load static %}
-    {% block title %}Portfolio{% endblock title %}
-    {% block contents %}
-    
-    {% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <h1>My Portfolio</h1>
+
+    {% for item in mylibrary %}
+        <div>
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.context }}</p>
+            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+
+            {% if item.github %}
+                <p>GitHub: <a href="{{ item.github }}" target="_blank">{{ item.github }}</a></p>
+            {% endif %}
+
+            <h3>Code:</h3>
+            {% for code_item in item.code_set.all %}
+            <h4>code is</h4>
+                <p>{{ code_item.code_content }}</p>
+            {% endfor %}
+
+            <p>Posted at: {{ item.posted_at }}</p>
+        </div>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>
