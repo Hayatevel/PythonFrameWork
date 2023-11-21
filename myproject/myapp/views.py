@@ -38,7 +38,7 @@ class EmailView(FormView):
         email = form.cleaned_data['email']
         message = form.cleaned_data['message']
         # メール送信
-        send_mail(subject, message, email, ['recipient@example.com'])
+        send_mail(subject, message, email, ['aokihayate20030709@gmail.com'])
         return super().form_valid(form)
     
     
