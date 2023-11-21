@@ -4,17 +4,14 @@
     {% block contents %}
     <!-- Page content -->
     <div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
-        <!-- Images (Photos) -->
         {% for x in  portfolio %}
             <img src="{{ x.image.url }}" alt="#" class="w3-image" width="1000" height="500">
             <h1>{{ x.title }}</h1>
             <p>{{ x.context }}</p>
             <a href="{{ x.github }}"></a>
-            <pre>
-                <code class="Python">
-                    {{ x.code }}
-                </code>
-            </pre>
+            <pre><code class="language-python code-container">{{ x.code }}</code></pre>
+            <hr>
+            <hr>
         {% endfor %}
     <!-- End page content -->
     </div>

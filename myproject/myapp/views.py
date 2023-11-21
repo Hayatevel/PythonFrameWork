@@ -22,6 +22,10 @@ class PortfolioView(ListView):
     context_object_name = 'portfolio'
     
     
+class TemporaryView(TemplateView):
+    template_name = 'temporary.html'
+    
+    
 class EmailView(FormView):
     template_name = 'email.html'
     form_class = EmailForm
