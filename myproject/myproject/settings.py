@@ -122,8 +122,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-if DEBUG:
-    STATIC_ROOT = '/home/ubuntu/static/'
+STATIC_ROOT = '/home/ubuntu/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
