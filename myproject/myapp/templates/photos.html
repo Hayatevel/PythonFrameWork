@@ -1,13 +1,17 @@
-{% extends "base.html" %}
-{% load static %}
-    {% block title %}Photos{% endblock %}
-    {% block contents %}
-    <!-- Page content -->
-    <div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
-        <!-- Images (Photos) -->
-        {% for x in photo %}
-            <img src="{{ x.images.url }}" alt="#" class="w3-image" width="1000" height="500">
-        {% endfor %}
-    <!-- End page content -->
-    </div>
-    {% endblock %}
+{% extends "base.html" %} {% load static %} {% block title %}Photos{% endblock
+%} {% block contents %}
+<!-- Page content -->
+<div class="w3-content w3-padding-large w3-margin-top" id="portfolio">
+  <!-- Images (Photos) -->
+  {% for x in photo %}
+  <img
+    src="{{ x.images.url }}"
+    alt="#"
+    class="w3-image"
+    width="1000"
+    height="500"
+  />
+  {% endfor %}
+  <!-- End page content -->
+</div>
+{% endblock %}

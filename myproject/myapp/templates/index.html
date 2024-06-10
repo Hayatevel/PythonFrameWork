@@ -1,185 +1,305 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <!-- head -->
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Hayate</title>
-        <link rel="icon" type="image/png" href="{% static 'img/favicon_python.png' %}" sizes="120x120"> <!-- favicon -->
-        <!-- Template 2097 Pop https://www.tooplate.com/view/2097-pop -->
-        <!-- load CSS -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">  <!-- Google web font "Open Sans" -->
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> <!-- https://getbootstrap.com/ -->
-        <link rel="stylesheet" href="{% static 'fontawesome/css/fontawesome-all.min.css' %}"> <!-- https://fontawesome.com/ -->
-        <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}"/> <!-- http://kenwheeler.github.io/slick/ -->
-        <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}"/>
-        <link rel="stylesheet" href="{% static 'css/my-index-style.css' %}"> <!-- Template style -->
-        <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this in a modern browser such as latest version of Chrome or Microsoft Edge.");</script>
-    </head>
-    <!-- body -->
-    <body>
-        <!-- Background video -->
-        <div id="video-area">
-            <video id="video" webkit-playsinline playsinline muted autoplay loop>
-                <source src="{% static 'img/bg_video.mp4' %}">
-            </video>
-        </div> <!-- #video-area -->
-        <!-- Display contents -->
-        <div id="tm-wrap">
-            <div class="tm-main-content">
-                <div class="container tm-site-header-container">
-                    <div class="row">
-                        <!-- Content of the left of centre -->
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col">
-                            <div class="tm-site-header">
-                                <h1 class="mb-4">Hayate Aoki</h1>
-                                <img src="{% static 'img/underline.png' %}" class="img-fluid mb-4">
-                                <p>The world will take you <br>
-                                    wherever you want to go.</p>
-                            </div> <!-- .tm-site-header -->
-                        </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col -->
-                        <!-- Content of the right of centre -->
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="content">
-                                <div class="grid">
-                                    <!-- grid of the top of left -->
-                                    <div class="grid__item" id="home-link">
-                                        <div class="product">
-                                            <div class="tm-nav-link">
-                                                <i class="fas fa-bolt fa-3x tm-nav-link"></i>
-                                                <span class="tm-nav-text">INTRODUCE</span>
-                                                <div class="product__bg"></div>
-                                            </div> <!-- .tm-nav-link -->
-                                            <div class="product__description">
-                                                <div class="row mb-3">
-                                                    <div class="col-12">
-                                                        <h2 class="tm-page-title">My Introduce</h2>
-                                                    </div> <!-- .col-12 -->
-                                                </div> <!-- .row mb-3 -->
-                                                <div class="row">
-                                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                        <img src="{% static 'img/hayate_logo.png' %}" class="img-fluid mb-3">
-                                                        <p>Welcome My Web Site</p>
-                                                        <p>
-                                                            NAME: Hayate Aoki / 青木 隼風<br>
-                                                            FROM: Chigasaki, Kanagawa, Japan
-                                                        </p>
-                                                    </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
-                                                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                                        <p>
-                                                            This website functions as a hub site html. <br>
-                                                            You can click on the different grids to go to different web pages. <br>
-                                                            You can also send me an email using the contact form. <br>
-                                                        </p>
-                                                        <img src="{% static 'img/chigasaki_visual.jpeg' %}" class="img-fluid">
-                                                    </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
-                                                </div> <!-- .row -->
-                                            </div> <!-- .product__description -->
-                                        </div> <!-- .product -->
-                                    </div> <!-- .grid__item #home-link -->
-                                    <!-- grid of the right of top -->
-                                    <div class="grid__item" id="team-link">
-                                        <div class="product">
-                                            <div class="tm-nav-link">
-                                                <i class="fas fa-users fa-3x tm-nav-icon"></i>
-                                                <span class="tm-nav-text">FOLIO</span>
-                                                <div class="product__bg"></div>
-                                            </div> <!-- .tm-nav-kink -->
-                                            <div class="product__description">
-                                                <div class="p-sm-4 p-2">
-                                                    <div class="folio">
-                                                        <h2 class="tm-page-title-folio">FOLIO</h2>
-                                                        <p>Folio Library</p>
-                                                        <a href="{% url 'myapp:portfolio' %}" class="btn bgskew btntextchange">
-                                                            <span>READY?</span>
-                                                            <span>GO!</span>
-                                                        </a>
-                                                    </div> <!-- .folio -->
-                                                </div> <!-- .p-sm-4 p-2 -->
-                                            </div> <!-- .product__description -->
-                                        </div> <!-- .product -->
-                                    </div> <!-- .grid_item #team-link -->
-                                    <!-- grid of the left of bottom -->
-                                    <div class="grid__item">
-                                        <div class="product">
-                                            <div class="tm-nav-link">
-                                                <i class="fas fa-regular fa-image fa-3x tm-nav-icon"></i>
-                                                <span class="tm-nav-text">GALLERY</span>
-                                                <div class="product__bg"></div>
-                                            </div> <!-- .tm-nav-link -->
-                                            <div class="product__description">
-                                                <div class="p-sm-4 p-2">
-                                                    <div class="folio">
-                                                        <h2 class="tm-page-title-folio">GALLERY</h2>
-                                                        <p>Photo Library</p>
-                                                        <a href="{% url 'myapp:photos' %}" class="btn bgskew btntextchange">
-                                                            <span>READY?</span>
-                                                            <span>GO!</span>
-                                                        </a>
-                                                    </div> <!-- .folio -->
-                                                </div> <!-- .p-sm-4 p-2 -->
-                                            </div> <!-- .product__description -->
-                                        </div> <!-- .product -->
-                                    </div> <!-- .grid__item -->
-                                    <!-- grid of the right of bottom -->
-                                    <div class="grid__item">
-                                        <div class="product">
-                                            <div class="tm-nav-link">
-                                                <i class="fas fa-comments fa-3x tm-nav-icon"></i>
-                                                <span class="tm-nav-text">CONTACT</span>
-                                                <div class="product__bg"></div>
-                                            </div> <!-- .tm-nav-link -->
-                                            <div class="product__description">
-                                                <div class="p-sm-4 p-2">
-                                                    <div class="folio">
-                                                        <h2 class="tm-page-title-folio">CONTACT</h2>
-                                                        <p>E-mail to me</p>
-                                                        <a href="{% url 'myapp:email' %}" class="btn bgskew btntextchange">
-                                                            <span>READY?</span>
-                                                            <span>GO!</span>
-                                                        </a>
-                                                    </div> <!-- .folio -->
-                                                </div> <!-- .p-sm-4 p-2 -->
-                                            </div> <!-- .product__description -->
-                                        </div> <!-- .product -->
-                                    </div> <!-- .grid__item -->
-                                </div>  <!-- .grid -->
-                            </div> <!-- .content -->
-                        </div> <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
-                    </div> <!-- .row -->
-                </div> <!-- .container tm-site-header-container -->
-                <!-- Footer -->
-                <footer>
-                    <p class="small tm-copyright-text">Copyright &copy; <span class="tm-current-year">2023</span> Hayate.inc
-                    Design: <a rel="nofollow" href="https://www.tooplate.com" class="tm-text-highlight">Tooplate</a></p>
-                </footer>
-            </div> <!-- .tm-main-content -->  
-        </div> <!-- .tm-wrap -->
-        <!-- load JS -->
-        <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script> <!-- https://jquery.com/ -->
-        <script src="{% static 'slick/slick.min.js' %}"></script> <!-- http://kenwheeler.github.io/slick/ -->
-        <script src="{% static 'js/anime.min.js' %}"></script> <!-- http://animejs.com/ -->
-        <script src="{% static 'js/main.js' %}"></script>
-        <script>
-            function setupFooter() {
-                var pageHeight = $('.tm-site-header-container').height() + $('footer').height() + 100;
-                var main = $('.tm-main-content');
-                if($(window).height() < pageHeight) {
-                    main.addClass('tm-footer-relative');
-                }
-                else {
-                    main.removeClass('tm-footer-relative');
-                }
-            }
-            /* DOM is ready */
-            $(function(){
-                setupFooter();
-                $(window).resize(function(){
-                    setupFooter();
-                });
-                $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
-            });
-        </script>
-    </body>
+  <!-- head -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hayate</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="{% static 'img/favicon_python.png' %}"
+      sizes="120x120"
+    />
+    <!-- favicon -->
+    <!-- Template 2097 Pop https://www.tooplate.com/view/2097-pop -->
+    <!-- load CSS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+    />
+    <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- https://getbootstrap.com/ -->
+    <link
+      rel="stylesheet"
+      href="{% static 'fontawesome/css/fontawesome-all.min.css' %}"
+    />
+    <!-- https://fontawesome.com/ -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'slick/slick.css' %}"
+    />
+    <!-- http://kenwheeler.github.io/slick/ -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'slick/slick-theme.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/my-index-style.css' %}" />
+    <!-- Template style -->
+    <script>
+      document.documentElement.className = "js";
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        return (
+          (t.innerHTML = "root: { --tmp-var: bold; }"),
+          document.head.appendChild(t),
+          (e = !!(
+            window.CSS &&
+            window.CSS.supports &&
+            window.CSS.supports("font-weight", "var(--tmp-var)")
+          )),
+          t.parentNode.removeChild(t),
+          e
+        );
+      };
+      supportsCssVars() ||
+        alert(
+          "Please view this in a modern browser such as latest version of Chrome or Microsoft Edge."
+        );
+    </script>
+  </head>
+  <!-- body -->
+  <body>
+    <!-- Background video -->
+    <div id="video-area">
+      <video id="video" webkit-playsinline playsinline muted autoplay loop>
+        <source src="{% static 'img/bg_video.mp4' %}" />
+      </video>
+    </div>
+    <!-- #video-area -->
+    <!-- Display contents -->
+    <div id="tm-wrap">
+      <div class="tm-main-content">
+        <div class="container tm-site-header-container">
+          <div class="row">
+            <!-- Content of the left of centre -->
+            <div
+              class="col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col"
+            >
+              <div class="tm-site-header">
+                <h1 class="mb-4">Hayate Aoki</h1>
+                <img
+                  src="{% static 'img/underline.png' %}"
+                  class="img-fluid mb-4"
+                />
+                <p>
+                  The world will take you <br />
+                  wherever you want to go.
+                </p>
+              </div>
+              <!-- .tm-site-header -->
+            </div>
+            <!-- .col-sm-12 col-md-6 col-lg-6 col-md-col-xl-6 mb-md-0 mb-sm-4 mb-4 tm-site-header-col -->
+            <!-- Content of the right of centre -->
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="content">
+                <div class="grid">
+                  <!-- grid of the top of left -->
+                  <div class="grid__item" id="home-link">
+                    <div class="product">
+                      <div class="tm-nav-link">
+                        <i class="fas fa-bolt fa-3x tm-nav-link"></i>
+                        <span class="tm-nav-text">INTRODUCE</span>
+                        <div class="product__bg"></div>
+                      </div>
+                      <!-- .tm-nav-link -->
+                      <div class="product__description">
+                        <div class="row mb-3">
+                          <div class="col-12">
+                            <h2 class="tm-page-title">My Introduce</h2>
+                          </div>
+                          <!-- .col-12 -->
+                        </div>
+                        <!-- .row mb-3 -->
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <img
+                              src="{% static 'img/hayate_logo.png' %}"
+                              class="img-fluid mb-3"
+                            />
+                            <p>Welcome My Web Site</p>
+                            <p>
+                              NAME: Hayate Aoki / 青木 隼風<br />
+                              FROM: Chigasaki, Kanagawa, Japan
+                            </p>
+                          </div>
+                          <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
+                          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <p>
+                              This website functions as a hub site html. <br />
+                              You can click on the different grids to go to
+                              different web pages. <br />
+                              You can also send me an email using the contact
+                              form. <br />
+                            </p>
+                            <img
+                              src="{% static 'img/chigasaki_visual.jpeg' %}"
+                              class="img-fluid"
+                            />
+                          </div>
+                          <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
+                        </div>
+                        <!-- .row -->
+                      </div>
+                      <!-- .product__description -->
+                    </div>
+                    <!-- .product -->
+                  </div>
+                  <!-- .grid__item #home-link -->
+                  <!-- grid of the right of top -->
+                  <div class="grid__item" id="team-link">
+                    <div class="product">
+                      <div class="tm-nav-link">
+                        <i class="fas fa-users fa-3x tm-nav-icon"></i>
+                        <span class="tm-nav-text">FOLIO</span>
+                        <div class="product__bg"></div>
+                      </div>
+                      <!-- .tm-nav-kink -->
+                      <div class="product__description">
+                        <div class="p-sm-4 p-2">
+                          <div class="folio">
+                            <h2 class="tm-page-title-folio">FOLIO</h2>
+                            <p>Folio Library</p>
+                            <a
+                              href="{% url 'myapp:portfolio' %}"
+                              class="btn bgskew btntextchange"
+                            >
+                              <span>READY?</span>
+                              <span>GO!</span>
+                            </a>
+                          </div>
+                          <!-- .folio -->
+                        </div>
+                        <!-- .p-sm-4 p-2 -->
+                      </div>
+                      <!-- .product__description -->
+                    </div>
+                    <!-- .product -->
+                  </div>
+                  <!-- .grid_item #team-link -->
+                  <!-- grid of the left of bottom -->
+                  <div class="grid__item">
+                    <div class="product">
+                      <div class="tm-nav-link">
+                        <i
+                          class="fas fa-regular fa-image fa-3x tm-nav-icon"
+                        ></i>
+                        <span class="tm-nav-text">GALLERY</span>
+                        <div class="product__bg"></div>
+                      </div>
+                      <!-- .tm-nav-link -->
+                      <div class="product__description">
+                        <div class="p-sm-4 p-2">
+                          <div class="folio">
+                            <h2 class="tm-page-title-folio">GALLERY</h2>
+                            <p>Photo Library</p>
+                            <a
+                              href="{% url 'myapp:photos' %}"
+                              class="btn bgskew btntextchange"
+                            >
+                              <span>READY?</span>
+                              <span>GO!</span>
+                            </a>
+                          </div>
+                          <!-- .folio -->
+                        </div>
+                        <!-- .p-sm-4 p-2 -->
+                      </div>
+                      <!-- .product__description -->
+                    </div>
+                    <!-- .product -->
+                  </div>
+                  <!-- .grid__item -->
+                  <!-- grid of the right of bottom -->
+                  <div class="grid__item">
+                    <div class="product">
+                      <div class="tm-nav-link">
+                        <i class="fas fa-comments fa-3x tm-nav-icon"></i>
+                        <span class="tm-nav-text">CONTACT</span>
+                        <div class="product__bg"></div>
+                      </div>
+                      <!-- .tm-nav-link -->
+                      <div class="product__description">
+                        <div class="p-sm-4 p-2">
+                          <div class="folio">
+                            <h2 class="tm-page-title-folio">CONTACT</h2>
+                            <p>E-mail to me</p>
+                            <a
+                              href="{% url 'myapp:email' %}"
+                              class="btn bgskew btntextchange"
+                            >
+                              <span>READY?</span>
+                              <span>GO!</span>
+                            </a>
+                          </div>
+                          <!-- .folio -->
+                        </div>
+                        <!-- .p-sm-4 p-2 -->
+                      </div>
+                      <!-- .product__description -->
+                    </div>
+                    <!-- .product -->
+                  </div>
+                  <!-- .grid__item -->
+                </div>
+                <!-- .grid -->
+              </div>
+              <!-- .content -->
+            </div>
+            <!-- .col-sm-12 col-md-6 col-lg-6 col-xl-6 -->
+          </div>
+          <!-- .row -->
+        </div>
+        <!-- .container tm-site-header-container -->
+        <!-- Footer -->
+        <footer>
+          <p class="small tm-copyright-text">
+            Copyright &copy;
+            <span class="tm-current-year">2023</span> Hayate.inc Design:
+            <a
+              rel="nofollow"
+              href="https://www.tooplate.com"
+              class="tm-text-highlight"
+              >Tooplate</a
+            >
+          </p>
+        </footer>
+      </div>
+      <!-- .tm-main-content -->
+    </div>
+    <!-- .tm-wrap -->
+    <!-- load JS -->
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+    <!-- https://jquery.com/ -->
+    <script src="{% static 'slick/slick.min.js' %}"></script>
+    <!-- http://kenwheeler.github.io/slick/ -->
+    <script src="{% static 'js/anime.min.js' %}"></script>
+    <!-- http://animejs.com/ -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script>
+      function setupFooter() {
+        var pageHeight =
+          $(".tm-site-header-container").height() + $("footer").height() + 100;
+        var main = $(".tm-main-content");
+        if ($(window).height() < pageHeight) {
+          main.addClass("tm-footer-relative");
+        } else {
+          main.removeClass("tm-footer-relative");
+        }
+      }
+      /* DOM is ready */
+      $(function () {
+        setupFooter();
+        $(window).resize(function () {
+          setupFooter();
+        });
+        $(".tm-current-year").text(new Date().getFullYear()); // Update year in copyright
+      });
+    </script>
+  </body>
 </html>
